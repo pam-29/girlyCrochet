@@ -1,0 +1,467 @@
+body{
+    margin: 0;
+}
+
+h2{
+    margin: 0;
+}
+
+p, a{
+    font-family: 'raleway', sans-serif;
+    font-size: 22px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #E979A0;
+    align-items: center;
+}
+
+header img{
+    border-radius: 50px;
+    padding: 10px 10px;
+}
+
+.icone{
+    padding-right: 30px;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+nav ul li { 
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0px solid transparent;
+    width: 0%;
+    height: 0%;
+    transition: all 0.5s ease;
+}
+
+nav ul li a::after {
+top: 0;
+left: 0;
+border-top: 2px solid transparent;
+border-left: 2px solid transparent;
+}
+
+nav ul li a::before {
+right: 0;
+bottom: 0;
+border-bottom: 2px solid transparent;
+border-right: 2px solid transparent;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+width: 50%;
+height: 50%;
+border-color: #fff;
+}
+
+/* Style de la barre de recherche */
+.search-container {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Quand on clique sur l'icône, la barre s'affiche */
+.search-container.active {
+    width: 200px;
+}
+
+.search-container.active input {
+    opacity: 1;
+}
+
+
+.debut{
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    background-color: #E979A0;
+}
+
+.debut-phrase{
+    flex-direction: column;
+}
+
+.link{
+    text-decoration: none;
+    color: #000000;
+}
+
+.link-container{
+    background-color: #F8E7E2;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    width: 25%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+h1{
+    margin-bottom: 80px;
+    font-size: 60px;
+    color: white;
+    font-family: 'impact';
+}
+
+.debut-phrase p{
+    color: white;
+    width: 60%;
+}
+
+
+.tuto-container, .shop{
+    padding: 80px 50px;
+    background-color: #F8E7E2;
+}
+
+.tuto{
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-tuto img{
+    box-shadow: -30px -20px 10px #E6CFC8;
+}
+
+h2{
+    font-size: 60px;
+    font-family: 'impact';
+}
+
+
+.tuto-phrase .link-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: #E979A0;
+}
+
+.tuto-phrase p{
+    margin-top: 200px;
+}
+
+.shop-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.shop-image{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.shop-image .link-container{
+    background-color: #E979A0;
+    width: auto;
+}
+
+.pink-barre{
+    background-color: #E979A0;
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.service h2{
+    margin-top: 50px; 
+    padding: 50px;
+}
+
+.service-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+footer{
+    background-color: #E979A0;
+    width: auto;
+    height: auto;
+    padding: 50px;
+}
+
+footer h2{
+    color: white;
+}
+
+footer ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+    opacity: 70%;
+}
+
+.liste{
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    text-align: center;
+}
+
+.reseau{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.link-container:hover{
+    background-color: #E6CFC8;
+    border-radius: 0;
+    scale: 1.1;
+}
+
+.link-container::after{
+    content: '';
+    background: #E979A0;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: -1;    
+}
+
+.link-container:hover::after{
+    width: 100%;
+}
+
+.link-rs:hover{
+    opacity: 60%;
+}
+
+@media screen and (max-width: 1100px) {
+    .shop-image img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .debut img, .image-tuto img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .debut{
+        gap: 50px;
+    }
+
+    .link-container{
+        margin-top: 30px;
+    }
+
+    h1{
+        margin-bottom: 0;
+    }
+
+    .tuto-phrase .link-container, .tuto-phrase p{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .debut{
+        padding-bottom: 70px;
+    }
+
+    h1{
+        margin-bottom: 50px;
+    }
+
+    .debut img{
+        display: none;
+    }
+
+    .tuto{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .tuto img{
+        margin-top: 60px;
+    }
+
+    .tuto-phrase .link-container{
+        margin-top: 50px;
+    }
+
+    .service-image p{
+        width: 50%;
+    }
+
+    nav ul{
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav ul li{
+        display: none;
+    }
+
+    .shop-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop-image .link-container{
+        width: auto;
+    }
+
+    .shop-image{
+        margin-top: 50px;
+    }
+
+    .reseau{
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .liste{
+        flex-direction: column;
+        gap: 0;
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 550px){
+    h1,h2{
+        font-size: 40px;
+    }
+
+    .debut-phrase p{
+        width: 85%;
+    }
+
+    .reseau{
+        align-items: center;
+        gap: 20px;
+        display: inline-flex;
+    }
+
+    .reseau img{
+        margin-top: 20px;
+    }
+
+    .debut-phrase p{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    p, a{
+        font-size: 20px;
+    }
+
+    h1,h2{
+        font-size: 30px;
+    }
+
+    .tuto img{
+        width: 200px;
+        height: 200px;
+        box-shadow: -20px -10px 10px #E6CFC8;
+    }
+
+    .tuto p{
+        margin-top: 30px;
+    }
+
+    .link-container{
+        width: auto;
+    }
+
+    .shop-container{
+        margin-top: 20px;
+    }
+
+    .pink-barre{
+        height: 30px;
+    }
+
+    .link-rs img{
+        width: 35px;
+        height: 35px;
+    }
+
+    header img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .icone img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .reseau{
+        gap: 20px;
+        display: inline-flex;
+    }
+
+    .search-container.active {
+        width: 150px;
+    }
+}
