@@ -111,10 +111,6 @@ border-color: #000000;
     cursor: pointer;
 }
 
-.search-container button img{
-    display: none;
-}
-
 /* Quand on clique sur l'icône, la barre s'affiche */
 .search-container.active {
     width: 200px;
