@@ -18,13 +18,15 @@ header{
     align-items: center;
 }
 
-header img{
+.logo{
     border-radius: 50px;
     padding: 10px 10px;
 }
 
 .icone{
-    padding-right: 30px;
+    padding-right: 40px;
+    display: flex;
+    gap: 20px;
 }
 
 nav{
@@ -36,6 +38,7 @@ nav ul{
     gap: 70px;
     align-items: center;
 }
+
 nav ul li { 
     list-style: none;
 }
@@ -99,17 +102,13 @@ border-color: #000000;
     border: none;
     outline: none;
     transition: opacity 0.3s ease-in-out;
+    padding: 10px;
 }
 
 .search-container button {
     background: none;
     border: none;
     cursor: pointer;
-}
-
-.search-container button img {
-    width: 20px;
-    height: 20px;
 }
 
 /* Quand on clique sur l'icône, la barre s'affiche */
@@ -120,7 +119,6 @@ border-color: #000000;
 .search-container.active input {
     opacity: 1;
 }
-
 
 .debut{
     display: flex;
